@@ -1,3 +1,4 @@
+const nodemon = require("nodemon");
 const express = require("express");
 const bodyParser = require("body-parser");
 const path = require("path");
@@ -15,7 +16,7 @@ app.use(cors());
 
 //Connect to DB
 const mongoURI =
-  "mongodb+srv://traveler:<password>@proj3sandbox-jomwz.mongodb.net/test?retryWrites=true&w=majority";
+  "mongodb+srv://traveler:travelogue@cluster0-jomwz.mongodb.net/test?retryWrites=true&w=majority";
 
 const conn = mongoose.createConnection(mongoURI);
 
@@ -77,6 +78,6 @@ app.get("/:filename", (req, res) => {
   });
 });
 
-const port = 5000;
+const port = 3000;
 
 app.listen(port, () => console.log(`Server started on port ${port}`));

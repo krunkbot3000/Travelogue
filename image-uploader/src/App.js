@@ -8,7 +8,7 @@ class App extends React.Component {
 
     formData.append("img", file[0]);
 
-    fetch("http://localhost:5000/", {
+    fetch("http://localhost:3000/", {
       method: "POST",
       body: formData
     }).then(r => {
@@ -17,7 +17,7 @@ class App extends React.Component {
 
     document
       .getElementById("img")
-      .setAttribute("src", `http://localhost:5000/${file[0].name}`);
+      .setAttribute("src", `http://localhost:3000/${file[0].name}`);
     console.log(file[0]);
   };
 
